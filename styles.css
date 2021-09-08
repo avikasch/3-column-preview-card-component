@@ -1,0 +1,126 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --p-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding: 90px 0;
+  background-color: var(--very-light-gray);
+}
+
+.sedans, .suvs, .luxury {
+  padding: 2.8125rem 3rem;
+}
+
+.container {
+  width: 20.5rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2.4rem;
+  color: var(--very-light-gray);
+  padding: 35px 0 25px 0;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--p-transparent-white);
+  line-height: 1.65;
+}
+
+button {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1rem;
+  background-color: var(--very-light-gray);
+  border: 2px var(--very-light-gray) solid;
+  padding: 13px 28px;
+  border-radius: 25px;
+  margin-top: 1.5rem;
+}
+
+button:hover {
+  color: var(--very-light-gray);
+  cursor: pointer;
+  background-color: var(--bright-orange)
+}
+
+.sedans, .btn-sedans:hover {
+  background-color: var(--bright-orange);
+}
+
+.sedans {
+  border-radius: 5px 5px 0 0;
+}
+
+.btn-sedans {
+  color: var(--bright-orange);
+}
+
+.suvs, .btn-suvs:hover {
+  background-color: var(--dark-cyan);
+}
+
+.btn-suvs {
+  color: var(--dark-cyan);
+}
+
+.luxury, .btn-luxury:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+.luxury {
+  border-radius: 0 0 5px 5px;
+}
+
+.btn-luxury {
+  color: var(--very-dark-cyan);
+}
+
+/***************** MEDIA QUERIES *******************/
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 5.2rem auto;
+    width: 100rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sedans, .suvs, .luxury {
+    position: relative;
+    width: 19.2rem;
+    height: 31.25rem;
+  }
+
+  .sedans {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .luxury {
+    border-radius: 0 5px 5px 0;
+  }
+
+  button {
+    margin-bottom: 3.125rem;
+    position: absolute;
+    bottom: 0;
+  }
+}
